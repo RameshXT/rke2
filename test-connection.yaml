@@ -1,0 +1,7 @@
+---
+- name: Test Basic Connection to All Nodes
+  hosts: all
+  gather_facts: no  # Don't gather facts yet
+  tasks:
+    - name: Check if we can connect via SSH
+      ping:

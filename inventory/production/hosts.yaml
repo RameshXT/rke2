@@ -1,0 +1,22 @@
+all:
+  hosts:
+    # Master node
+    master-node:
+      ansible_host: 3.101.80.212
+      ansible_user: ec2-user
+      node_ip: 10.0.2.13
+    
+    # Worker nodes
+    worker-1:
+      ansible_host: 3.101.76.93
+      ansible_user: ec2-user
+      node_ip: 10.0.2.216
+    
+    worker-2:
+      ansible_host: 18.144.32.136
+      ansible_user: ec2-user
+      node_ip: 10.0.2.84
+  
+  vars:
+    ansible_ssh_private_key_file: ~/.ssh/ramesh-us-west-1.pem
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
